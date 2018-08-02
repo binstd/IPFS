@@ -10,7 +10,7 @@ This repo contains the source code and documentation powering [reactjs.org](http
 1. Node: install version 8.4 or greater
 1. Yarn: See [Yarn website for installation instructions](https://yarnpkg.com/lang/en/docs/install/)
 1. A fork of the repo (for any contributions)
-1. git clone (https://github.com/binstd/bytom) 到您的电脑
+1. git clone (https://github.com/binstd/IPFS) 到您的电脑
 
 ### 安装
 
