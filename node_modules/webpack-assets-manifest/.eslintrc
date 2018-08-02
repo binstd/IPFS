@@ -1,0 +1,9 @@
+{
+  "extends": "webdeveric",
+  "env": {
+    "browser": false,
+    "es6": true,
+    "mocha": true,
+    "node": true
+  }
+}
