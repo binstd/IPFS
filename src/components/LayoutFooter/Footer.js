@@ -99,8 +99,7 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => (
               BinSTD
             </ExternalFooterLink>
             <ExternalFooterLink
-              href=""
-              target="_blank"
+              href="/community/support.html#%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"
               rel="noopener">
               微信公众号
             </ExternalFooterLink>

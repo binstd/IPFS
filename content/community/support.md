@@ -8,36 +8,35 @@ redirect_from:
   - "support.html"
 ---
 
-**IPFS** 是领先的区块链技术， 开发者社群资源如下：
+IPFS中文技术文档
 
 ## 管理团队
-站长：jack
-编辑：bill steven
+
+站长：cho
+
+编辑：qaeasy sarah21cn
 
 ## QQ开发群
 
-IPFSQQ开发华北群 
+IPFS QQ开发群：866211809
 
-IPFSQQ开发华东群 
-
-IPFSQQ开发华南群 
+IPFS QQ开发高级群 
 
 ## 微信开发群
 
-IPFS上海微信开发群 
+IPFS 微信开发群 
 
-IPFS杭州微信开发群 
+IPFS 微信开发高级群 
 
-IPFS北京微信开发群 
+## 微信公众号
 
-IPFS深圳微信开发群 
+微信公众号：binstd
 
 ## Stack Overflow
 
 Many members of the community use Stack Overflow to ask questions. Read through the [existing questions](http://stackoverflow.com/questions/tagged/IPFS) tagged with **IPFS** or [ask your own](http://stackoverflow.com/questions/ask?tags=IPFS)!
 
 ## Discussion Forum
-
 
 
 ## DEV Community
@@ -47,7 +46,6 @@ Many members of the community use Stack Overflow to ask questions. Read through 
 
 
 ## Reactiflux Chat
-
 
 ## Facebook and Twitter
 
