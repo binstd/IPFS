@@ -12,9 +12,9 @@ IPFS中文技术文档
 
 ## 管理团队
 
-站长：cho
+站长：[cho](https://www.binstd.com/u/cho)
 
-编辑：qaeasy sarah21cn
+译者/校对：[qaeasy](https://www.binstd.com/u/qaeasy) [sarah21cn](https://www.binstd.com/u/sarah21cn)
 
 ## QQ开发群
 

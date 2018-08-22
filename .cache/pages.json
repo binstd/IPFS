@@ -2107,18 +2107,18 @@
         "path": "/blog/2018/05/23/react-v-16-4.html"
     },
     {
-        "componentChunkName": "component---src-templates-community-js",
-        "layout": "layout---index",
-        "layoutComponentChunkName": "component---src-layouts-index-js",
-        "jsonName": "community-support-html.json",
-        "path": "/community/support.html"
-    },
-    {
         "componentChunkName": "component---src-templates-docs-js",
         "layout": "layout---index",
         "layoutComponentChunkName": "component---src-layouts-index-js",
         "jsonName": "docs-getting-started-html.json",
         "path": "/docs/getting-started.html"
+    },
+    {
+        "componentChunkName": "component---src-templates-community-js",
+        "layout": "layout---index",
+        "layoutComponentChunkName": "component---src-layouts-index-js",
+        "jsonName": "community-support-html.json",
+        "path": "/community/support.html"
     },
     {
         "componentChunkName": "component---cache-dev-404-page-js",

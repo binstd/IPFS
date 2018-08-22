@@ -144,12 +144,15 @@ I <3 IPFS -<your username>
 Tip
 打赏
 
-译者
+译者 [qaeasy](https://www.binstd.com/u/qaeasy)
+
 ETH: `0x7CdaF81D544E2a3bd993e639D1a4d6785067cB24`
 
-校对
-ETH: `0x6bcCfb7265d4aB0C1a71F7d19b9E581cae73D777`
+校对 [sarah21cn](https://www.binstd.com/u/sarah21cn)
 
-站长
+ETH: `0xC70702AF123338852B91A2e26BeE9B256b6a2080`
+
+站长 [cho](https://www.binstd.com/u/cho)
+
 1. BTC: `1Af2Q23Y1kqgtgbryzjS7RxrnEmyvYuX4b`
 2. ETH: `0x6bcCfb7265d4aB0C1a71F7d19b9E581cae73D777`
