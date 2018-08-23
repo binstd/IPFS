@@ -1,5 +1,5 @@
 ---
-title: Component-Based
+title: 技术文档
 order: 1
 ---
 

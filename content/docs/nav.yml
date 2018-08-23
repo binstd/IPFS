@@ -2,8 +2,8 @@
   items:
     - id: getting-started
       title: 快速开始
-    - id: add-react-to-a-website
-      title: Add React to a Website
+    - id: install
+      title: 安装IPFS
     - id: create-a-new-react-app
       title: Create a New React App
     - id: cdn-links
@@ -35,10 +35,10 @@
       title: Composition vs Inheritance
     - id: thinking-in-react
       title: Thinking In React
-- title: Advanced Guides
+- title: 白皮书
   items:
-    - id: accessibility
-      title: Accessibility
+    - id: whitepaper
+      title: IPFS白皮书中文版
     - id: code-splitting
       title: Code-Splitting
     - id: context
