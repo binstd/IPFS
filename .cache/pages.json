@@ -1274,13 +1274,6 @@
         "path": "/blog/2013/06/12/community-roundup.html"
     },
     {
-        "componentChunkName": "component---src-templates-docs-js",
-        "layout": "layout---index",
-        "layoutComponentChunkName": "component---src-layouts-index-js",
-        "jsonName": "docs-whitepaper-html.json",
-        "path": "/docs/whitepaper.html"
-    },
-    {
         "componentChunkName": "component---src-templates-blog-js",
         "layout": "layout---index",
         "layoutComponentChunkName": "component---src-layouts-index-js",
@@ -2133,6 +2126,27 @@
         "layoutComponentChunkName": "component---src-layouts-index-js",
         "jsonName": "docs-install-html.json",
         "path": "/docs/install.html"
+    },
+    {
+        "componentChunkName": "component---src-templates-tutorial-js",
+        "layout": "layout---index",
+        "layoutComponentChunkName": "component---src-layouts-index-js",
+        "jsonName": "tutorial-whitepaperc-html.json",
+        "path": "/tutorial/whitepaperc.html"
+    },
+    {
+        "componentChunkName": "component---src-templates-tutorial-js",
+        "layout": "layout---index",
+        "layoutComponentChunkName": "component---src-layouts-index-js",
+        "jsonName": "tutorial-whitepaperb-html.json",
+        "path": "/tutorial/whitepaperb.html"
+    },
+    {
+        "componentChunkName": "component---src-templates-tutorial-js",
+        "layout": "layout---index",
+        "layoutComponentChunkName": "component---src-layouts-index-js",
+        "jsonName": "tutorial-whitepapera-html.json",
+        "path": "/tutorial/whitepapera.html"
     },
     {
         "componentChunkName": "component---cache-dev-404-page-js",

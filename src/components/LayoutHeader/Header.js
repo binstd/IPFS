@@ -119,9 +119,9 @@ const Header = ({location}: {location: Location}) => (
             to="/docs/getting-started.html"
           />
           <HeaderLink
-            isActive={location.pathname.includes('/community/')}
+            isActive={location.pathname.includes('/tutorial/')}
             title="白皮书"
-            to="/docs/whitepaper.html"
+            to="/tutorial/whitepapera.html"
           />
           <HeaderLink
             isActive={location.pathname.includes('/community/')}

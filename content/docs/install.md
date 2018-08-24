@@ -147,9 +147,9 @@ go version go1.7 linux/amd64
 Tip
 打赏
 
-译者 [qaeasy](https://www.binstd.com/u/qaeasy)
+译者 [zian](https://www.binstd.com/u/zian)
 
-ETH: `0x7CdaF81D544E2a3bd993e639D1a4d6785067cB24`
+ETH: `0xAf1c0a63Ade4b56e262849235e49D87742C56af4`
 
 校对 [qaeasy](https://www.binstd.com/u/qaeasy)
 
