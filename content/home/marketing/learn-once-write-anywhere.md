@@ -3,6 +3,6 @@ title: 开发者社群
 order: 2
 ---
 
-We don't make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code.
+全球中文IPFS高级开发者社群，IPFS中文程序员理事会联盟
 
-React can also render on the server using Node and power mobile apps using [React Native](https://facebook.github.io/react-native/).
+快来加入我们

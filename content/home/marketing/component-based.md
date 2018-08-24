@@ -3,6 +3,6 @@ title: 技术文档
 order: 1
 ---
 
-Build encapsulated components that manage their own state, then compose them to make complex UIs.
+提供最全面，最及时，最权威的IPFS开发技术信息。
 
-Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.
+IPFS其他动态及发展趋势

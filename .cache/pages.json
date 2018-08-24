@@ -2131,13 +2131,6 @@
         "componentChunkName": "component---src-templates-tutorial-js",
         "layout": "layout---index",
         "layoutComponentChunkName": "component---src-layouts-index-js",
-        "jsonName": "tutorial-whitepaperc-html.json",
-        "path": "/tutorial/whitepaperc.html"
-    },
-    {
-        "componentChunkName": "component---src-templates-tutorial-js",
-        "layout": "layout---index",
-        "layoutComponentChunkName": "component---src-layouts-index-js",
         "jsonName": "tutorial-whitepaperb-html.json",
         "path": "/tutorial/whitepaperb.html"
     },
@@ -2147,6 +2140,13 @@
         "layoutComponentChunkName": "component---src-layouts-index-js",
         "jsonName": "tutorial-whitepapera-html.json",
         "path": "/tutorial/whitepapera.html"
+    },
+    {
+        "componentChunkName": "component---src-templates-tutorial-js",
+        "layout": "layout---index",
+        "layoutComponentChunkName": "component---src-layouts-index-js",
+        "jsonName": "tutorial-whitepaperc-html.json",
+        "path": "/tutorial/whitepaperc.html"
     },
     {
         "componentChunkName": "component---cache-dev-404-page-js",
