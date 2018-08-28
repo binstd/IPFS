@@ -1,16 +1,16 @@
 backend:
-  name: test-repo
+  name: git-gateway
+  branch: master
 
-media_folder: static/assets
-public_folder: assets
+media_folder: static/img
+public_folder: /img
 
 collections:
-  - name: blog
-    label: Blog
-    folder: blog
+  - name: "docs"
+    label: "Docs"
+    folder: "/content/docs"
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { name: "permalink", label: '路由「结尾为.html」' }
+      - { name: "title", label: "Title", widget: "string"}
+      - { name: "body", label: "Body", widget: "markdown" }
