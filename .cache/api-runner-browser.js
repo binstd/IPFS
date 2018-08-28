@@ -1,20 +1,20 @@
 var plugins = [{
-      plugin: require('/Users/ckehao/cho/tplan/IPFS/node_modules/gatsby-plugin-glamor/gatsby-browser'),
+      plugin: require('/Users/luz/code/js/ipfs-docs/node_modules/gatsby-plugin-glamor/gatsby-browser'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/ckehao/cho/tplan/IPFS/node_modules/gatsby-plugin-twitter/gatsby-browser'),
+      plugin: require('/Users/luz/code/js/ipfs-docs/node_modules/gatsby-plugin-twitter/gatsby-browser'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/ckehao/cho/tplan/IPFS/node_modules/gatsby-plugin-nprogress/gatsby-browser'),
+      plugin: require('/Users/luz/code/js/ipfs-docs/node_modules/gatsby-plugin-nprogress/gatsby-browser'),
       options: {"plugins":[],"color":"#61dafb"},
     },{
-      plugin: require('/Users/ckehao/cho/tplan/IPFS/node_modules/gatsby-remark-autolink-headers/gatsby-browser'),
+      plugin: require('/Users/luz/code/js/ipfs-docs/node_modules/gatsby-remark-autolink-headers/gatsby-browser'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/ckehao/cho/tplan/IPFS/node_modules/gatsby-plugin-google-analytics/gatsby-browser'),
+      plugin: require('/Users/luz/code/js/ipfs-docs/node_modules/gatsby-plugin-google-analytics/gatsby-browser'),
       options: {"plugins":[],"trackingId":"UA-41298772-1"},
     },{
-      plugin: require('/Users/ckehao/cho/tplan/IPFS/node_modules/gatsby-plugin-catch-links/gatsby-browser'),
+      plugin: require('/Users/luz/code/js/ipfs-docs/node_modules/gatsby-plugin-catch-links/gatsby-browser'),
       options: {"plugins":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks
