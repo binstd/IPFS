@@ -2834,7 +2834,6 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 
 
-
 ---
 
 Tip
@@ -2845,6 +2844,8 @@ Tip
 ETH: `0xC70702AF123338852B91A2e26BeE9B256b6a2080`
 
 校对 [yangliu](https://www.binstd.com/u/yangliu)
+
+ETH: `0x85d718C27a3eB0be78A5835C0805A7b1834A6B34`
 
 站长 [cho](https://www.binstd.com/u/cho)
 
