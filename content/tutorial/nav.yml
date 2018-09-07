@@ -1,5 +1,28 @@
 - title: IPFS白皮书
   items:
+    - id: whitepaperipfs1
+      title: 摘要
+      href: /tutorial/whitepaperipfs.html#摘要
+    - id: whitepaperipfs2
+      title: 1 介绍
+      href: /tutorial/whitepaperipfs.html#1-介绍
+    - id: whitepaperipfs3
+      title: 2 背景
+      href: /tutorial/whitepaperipfs.html#2-背景
+    - id: whitepaperipfs4
+      title: 3 IPFS设计
+      href: /tutorial/whitepaperipfs.html#3-IPFS设计
+    - id: whitepaperipfs5
+      title: 4 未来
+      href: /tutorial/whitepaperipfs.html#4-未来
+    - id: whitepaperipfs6
+      title: 5 感谢
+      href: /tutorial/whitepaperipfs.html#5-感谢
+    - id: whitepaperipfs6
+      title: 6 引用
+      href: /tutorial/whitepaperipfs.html#6-引用
+- title: Filecoin白皮书
+  items:
     - id: whitepaper1
       title: 摘要
       href: /tutorial/whitepapera.html#摘要

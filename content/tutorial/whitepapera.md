@@ -1,6 +1,6 @@
 ---
 id: whitepapera
-title: IPFS白皮书 中文版 I
+title: Filecoin白皮书 中文版 I
 permalink: tutorial/whitepapera.html
 ---
 

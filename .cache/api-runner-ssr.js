@@ -1,20 +1,20 @@
 var plugins = [{
-      plugin: require('/Users/luz/code/js/ipfs-docs/node_modules/gatsby-plugin-glamor/gatsby-ssr'),
+      plugin: require('/Users/ckehao/cho/tplan/IPFS/node_modules/gatsby-plugin-glamor/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/luz/code/js/ipfs-docs/node_modules/gatsby-plugin-twitter/gatsby-ssr'),
+      plugin: require('/Users/ckehao/cho/tplan/IPFS/node_modules/gatsby-plugin-twitter/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/luz/code/js/ipfs-docs/node_modules/gatsby-remark-autolink-headers/gatsby-ssr'),
+      plugin: require('/Users/ckehao/cho/tplan/IPFS/node_modules/gatsby-remark-autolink-headers/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/luz/code/js/ipfs-docs/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
+      plugin: require('/Users/ckehao/cho/tplan/IPFS/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
       options: {"plugins":[],"trackingId":"UA-41298772-1"},
     },{
-      plugin: require('/Users/luz/code/js/ipfs-docs/node_modules/gatsby-plugin-feed/gatsby-ssr'),
+      plugin: require('/Users/ckehao/cho/tplan/IPFS/node_modules/gatsby-plugin-feed/gatsby-ssr'),
       options: {"plugins":[],"query":"\n         {\n          site {\n            siteMetadata {\n              title: rssFeedTitle\n              description: rssFeedDescription\n              siteUrl\n              site_url: siteUrl\n            }\n          }\n        }","feeds":[{"query":"\n              {\n                  allMarkdownRemark\n                  (limit: 10,\n                  filter: {id: {regex: \"/blog/\"}},\n                  sort: {fields: [fields___date],\n                  order: DESC}) {\n                    edges {\n                      node {\n                        fields {\n                          date\n                          slug\n                        }\n                        frontmatter {\n                          title\n                        }\n                        html\n                      }\n                    }\n                  }\n                }\n            ","output":"/feed.xml"}]},
     },{
-      plugin: require('/Users/luz/code/js/ipfs-docs/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('/Users/ckehao/cho/tplan/IPFS/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:

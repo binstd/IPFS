@@ -1,6 +1,6 @@
 ---
 id: whitepaperb
-title: IPFS白皮书 中文版 II
+title: Filecoin白皮书 中文版 II
 permalink: tutorial/whitepaperb.html
 ---
 

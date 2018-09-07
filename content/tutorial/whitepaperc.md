@@ -1,6 +1,6 @@
 ---
 id: whitepaperc
-title: IPFS白皮书 中文版 III
+title: Filecoin白皮书 中文版 III
 permalink: tutorial/whitepaperc.html
 ---
 
