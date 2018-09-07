@@ -2100,25 +2100,11 @@
         "path": "/warnings/special-props.html"
     },
     {
-        "componentChunkName": "component---src-templates-tutorial-js",
-        "layout": "layout---index",
-        "layoutComponentChunkName": "component---src-layouts-index-js",
-        "jsonName": "tutorial-whitepapera-html.json",
-        "path": "/tutorial/whitepapera.html"
-    },
-    {
         "componentChunkName": "component---src-templates-docs-js",
         "layout": "layout---index",
         "layoutComponentChunkName": "component---src-layouts-index-js",
         "jsonName": "warnings-unknown-prop-html.json",
         "path": "/warnings/unknown-prop.html"
-    },
-    {
-        "componentChunkName": "component---src-templates-tutorial-js",
-        "layout": "layout---index",
-        "layoutComponentChunkName": "component---src-layouts-index-js",
-        "jsonName": "tutorial-whitepaperb-html.json",
-        "path": "/tutorial/whitepaperb.html"
     },
     {
         "componentChunkName": "component---src-templates-blog-js",
@@ -2135,18 +2121,32 @@
         "path": "/tutorial/tutorial.html"
     },
     {
-        "componentChunkName": "component---src-templates-tutorial-js",
-        "layout": "layout---index",
-        "layoutComponentChunkName": "component---src-layouts-index-js",
-        "jsonName": "tutorial-whitepaperc-html.json",
-        "path": "/tutorial/whitepaperc.html"
-    },
-    {
         "componentChunkName": "component---src-templates-docs-js",
         "layout": "layout---index",
         "layoutComponentChunkName": "component---src-layouts-index-js",
         "jsonName": "docs-api-html.json",
         "path": "/docs/api.html"
+    },
+    {
+        "componentChunkName": "component---src-templates-tutorial-js",
+        "layout": "layout---index",
+        "layoutComponentChunkName": "component---src-layouts-index-js",
+        "jsonName": "tutorial-whitepapera-html.json",
+        "path": "/tutorial/whitepapera.html"
+    },
+    {
+        "componentChunkName": "component---src-templates-tutorial-js",
+        "layout": "layout---index",
+        "layoutComponentChunkName": "component---src-layouts-index-js",
+        "jsonName": "tutorial-whitepaperb-html.json",
+        "path": "/tutorial/whitepaperb.html"
+    },
+    {
+        "componentChunkName": "component---src-templates-tutorial-js",
+        "layout": "layout---index",
+        "layoutComponentChunkName": "component---src-layouts-index-js",
+        "jsonName": "tutorial-whitepaperc-html.json",
+        "path": "/tutorial/whitepaperc.html"
     },
     {
         "componentChunkName": "component---src-templates-tutorial-js",
