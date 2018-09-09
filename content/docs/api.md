@@ -180,7 +180,6 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 * [/update](/docs/api.html#apiv0update)
 * [/version](/docs/api.html#apiv0version)
 
-
 ## 路径列表
 
 ### /api/v0/add
@@ -190,22 +189,22 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 #### 参数 
 
 * arg [file]: 待添加到 ipfs 的文件路径。是否必要: **是**。
-* recursive [bool]: 递归添加目录路径。缺省：“假”。是否必要: 否。
-* quiet [bool]: 输出最小值。 是否必要: 否。
-* quieter [bool]: 输出最终唯一哈希值。是否必要: 否。
-* silent [bool]: Write no output. 是否必要: 否。
+* recursive [bool]: 是否递归添加目录路径。默认: 否。是否必要: 否。
+* quiet [bool]: 是否最小输出。 是否必要: 否。
+* quieter [bool]: 是否只写入哈希值。是否必要: 否。
+* silent [bool]: 是否不输出。是否必要: 否。
 * progress [bool]: Stream progress data. 是否必要: 否。
-* trickle [bool]: Use trickle-dag format for dag generation. 是否必要: 否。
-* only-hash [bool]: Only chunk and hash - do not write to disk. 是否必要: 否。
-* wrap-with-directory [bool]: Wrap files with a directory object. 是否必要: 否。
-* hidden [bool]: Include files that are hidden. Only takes effect on recursive add. 是否必要: 否。
-* chunker [string]: Chunking algorithm to use.是否必要: 否。
-* pin [bool]: Pin this object when adding. Default: “true”. 是否必要: 否。
-* raw-leaves [bool]: Use raw blocks for leaf nodes. (experimental). 是否必要: 否。
-* nocopy [bool]: Add the file using filestore. (experimental). 是否必要: 否。
-* fscache [bool]: Check the filestore for pre-existing blocks. (experimental). 是否必要: 否。
-* cid-version [int]: Cid version. Non-zero value will change default of ‘raw-leaves’ to true.  (experimental). Default: “0”. 是否必要: 否。
-* hash [string]: Hash function to use. Will set Cid version to 1 if used. (experimental). Default: “sha2-256”. 是否必要: 否。
+* trickle [bool]: 是否使用 trickle-dag 格式算法生成DAG。是否必要: 否。
+* only-hash [bool]: 是否仅仅出块和hash，不写入磁盘。是否必要: 否。
+* wrap-with-directory [bool]:  是否使用目录对象来包装文件。是否必要: 否。
+* hidden [bool]: 是否添加隐藏文件，只有在递归的时候才有用。是否必要: 否。
+* chunker [string]: 使用的成块算法。是否必要: 否。
+* pin [bool]: 是否在添加的时候持久化 (不被垃圾回收所回收)。默认：否。是否必要: 否。
+* raw-leaves [bool]: 实验中的参数。是否为叶子节点使用原始块。是否必要: 否。
+* nocopy [bool]: 实验中的参数。是否使用filestore存储文件。是否必要: 否。
+* fscache [bool]: 实验中的参数。检测filestore是否已经存在了数据块。是否必要: 否。
+* cid-version [int]: 实验中的参数。返回 Cid 版本。非零值将把 ‘raw-leaves’ 的默认值变为真。默认：“0”。是否必要: 否。
+* hash [string]: 实验中的参数。使用的哈希函数。使用时设置 Cid 值为1。默认: “sha2-256”。是否必要: 否。
 
 #### 请求体 
 
@@ -370,10 +369,10 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [file]: The data to be stored as an IPFS block. Required: yes.
-* format [string]: cid format for blocks to be created with. Default: “v0”. Required: no.
-* mhtype [string]: multihash hash function. Default: “sha2-256”. Required: no.
-* mhlen [int]: multihash hash length. Default: “-1”. Required: no.
+* arg [file]: 需要被存储为 IPFS 块的数据。是否必须：是。
+* format [string]: 所创建块的cid格式。默认: “v0”。是否必须：否。
+* mhtype [string]: 返回multihash结构的哈希函数. 默认: “sha2-256”。是否必须：否。
+* mhlen [int]: multihash结构的长度。默认: “-1”。是否必须：否。
 
 #### 请求体
 
@@ -399,9 +398,9 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Bash58 encoded multihash of block(s) to remove. Required: yes.
-* force [bool]: Ignore nonexistent blocks. Default: “false”. Required: no.
-* quiet [bool]: Write minimal output. Default: “false”. Required: no.
+* arg [string]: 将被移除的base58编码的multihash区块。是否必须：是。
+* force [bool]: 是否忽略不存在的区块。默认：否。是否必须：否。
+* quiet [bool]: 是否最小输出。默认: 否。是否必须：否。
 
 #### 响应
 
@@ -422,7 +421,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: 当前块的base58 multihash. Required: yes.
+* arg [string]: 当前块的base58 multihash。是否必须：是。
 
 #### 响应
 
@@ -527,7 +526,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* flags [bool]: Show command flags. Default: “false”. Required: no.
+* flags [bool]: 是否显示命令标记。默认: 否。是否必须：否。
 
 #### 响应
 
@@ -595,7 +594,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [file]: The file to use as the new config. Required: yes.
+* arg [file]: 用作新配置文件的文件。是否必须：是。
 
 #### 请求体
 
@@ -635,7 +634,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: The object to get Required: yes.
+* arg [string]: 要获取的对象节点。是否必须：是。
 
 #### 响应
 
@@ -653,11 +652,11 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [file]: The object to put Required: yes.
-* format [string]: Format that the object will be added as. Default: “cbor”. Required: no.
-* input-enc [string]: Format that the input object will be. Default: “json”. Required: no.
-* pin [bool]: Pin this object when adding. Default: “false”. Required: no.
-* hash [string]: Hash function to use. Default: . Required: no.
+* arg [file]: 要放入的节点对象。是否必须：是。
+* format [string]: 将需要添加的对象转化为指定格式。默认: “cbor”。是否必须：否。
+* input-enc [string]: 将输入对象转化为指定格式。默认: “json”。是否必须：否。
+* pin [bool]: 是否在添加的时候持久化。默认: 否。是否必须：否。
+* hash [string]: 使用的哈希函数。默认: “sha2-256”。是否必要: 否。
 
 #### 请求体
 
@@ -682,7 +681,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: The path to resolve Required: yes.
+* arg [string]: 需要解析的路径。是否必须: 是。 
 
 #### 响应
 
@@ -699,12 +698,12 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 ### /api/v0/dht/findpeer
 
-在DHT表中查找与peer ID相连的地址。
+查询和节点ID相关联的多地址的所有DHT信息。
 
 #### 参数
 
-* arg [string]: The ID of the peer to search for. Required: yes.
-* verbose [bool]: Print extra information. Default: “false”. Required: no.
+* arg [string]: 需要查询的节点ID。是否必须: 是。
+* verbose [bool]: 是否输出其他信息。默认: 否。是否必须: 否。
 
 #### 响应
 
@@ -730,13 +729,13 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 ### /api/v0/dht/findprovs
 
-在DHT中查找可以提供特定值(给定键)的peers。
+在DHT网络中找到有指定值的节点。
 
 #### 参数
 
-* arg [string]: The key to find providers for. Required: yes.
-* verbose [bool]: Print extra information. Default: “false”. Required: no.
-* num-providers [int]: The number of providers to find. Default: “20”. Required: no.
+* arg [string]: 有指定值的节点的键。是否必须: 是。
+* verbose [bool]: 是否输出其他信息。默认: 否。是否必须: 否。
+* num-providers [int]: 有指定值的节点数量。默认: 20。是否必须: 否。
 
 #### 响应
 
@@ -767,8 +766,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: The key to find a value for. Required: yes.
-* verbose [bool]: Print extra information. Default: “false”. Required: no.
+* arg [string]: 需要查询值的键。是否必须: **是**。
+* verbose [bool]: 是否输出其他信息。默认: 否。是否必须: 否。
 
 #### 响应
 
@@ -794,13 +793,13 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 ### /api/v0/dht/provide
 
-向网络宣布您正在提供给定的值。
+向网络宣布正在提供给定的值。
 
 #### 参数
 
-* arg [string]: The key[s] to send provide records for. Required: yes.
-* verbose [bool]: Print extra information. Default: “false”. Required: no.
-* recursive [bool]: Recursively provide entire graph. Default: “false”. Required: no.
+* arg [string]: 需要接受记录的所有节点的键。是否必须: 是。
+* verbose [bool]: 是否输出其他信息。默认: 否。是否必须: 否。
+* recursive [bool]:  是否递归添加目录路径。是否输出其他信息。默认: 否。是否必须: 否。
 
 #### 响应
 
@@ -826,13 +825,13 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 ### /api/v0/dht/put
 
-将键/值对写入DHT。
+往DHT网络中写入key-value值。
 
 #### 参数
 
-* arg [string]: The key to store the value at. Required: yes.
-* arg [string]: The value to store. Required: yes.
-* verbose [bool]: Print extra information. Default: “false”. Required: no.
+* arg [string]: 存取特定值的节点的键。是否必须: 是。
+* arg [string]: 要存储的值。是否必须: 是。
+* verbose [bool]: 是否输出其他信息。默认: 否。是否必须: 否。
 
 #### 响应
 
@@ -858,12 +857,12 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 ### /api/v0/dht/query
 
-通过查询DHT找到与给定Peer ID最近的Peer IDs。
+通过查询DHT网络找到与给定节点最近的节点。
 
 #### 参数
 
-* arg [string]: The peerID to run the query against. Required: yes.
-* verbose [bool]: Print extra information. Default: “false”. Required: no.
+* arg [string]: 针对此次查询的节点 ID。是否必须: 是。
+* verbose [bool]: 是否输出其他信息。默认: 否。是否必须: 否。
 
 #### 响应
 
@@ -911,7 +910,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Time to keep inactive requests in log. Required: yes.
+* arg [string]: 在日志中保存失效请求的时间。是否必须: 是。
 
 #### 响应
 
@@ -943,12 +942,12 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 ### /api/v0/dns
 
-解决DNS链接。
+解析DNS链接。
 
 #### 参数
 
-* arg [string]: The domain-name name to resolve. Required: yes.
-* recursive [bool]: Resolve until the result is not a DNS link. Default: “false”. Required: no.
+* arg [string]: 需要解析的域名。是否必须: 是。
+* recursive [bool]:  是否递进解析，终止条件为解析结果不是 DNS 链接。默认: 否。是否必须: 否。
 
 #### 响应
 
@@ -968,7 +967,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: The path to the IPFS object(s) to list links from. Required: yes.
+* arg [string]: 所列出 ipfs 对象的路径。是否必须: 是。
 
 #### 响应
 
@@ -1005,8 +1004,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Source object to copy. Required: yes.
-* arg [string]: Destination to copy object to. Required: yes.
+* arg [string]: 要复制的源对象。是否必须: 是。
+* arg [string]: 复制的目的地。是否必须: 是。
 
 #### 响应
 
@@ -1024,7 +1023,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Path to flush. Default: ‘/’. Required: no.
+* arg [string]: 落盘路径。默认: ‘/’。是否必须: 否。
 
 #### 响应
 
@@ -1038,12 +1037,12 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 ### /api/v0/files/ls
 
-列出本地可变名称空间中的目录。
+列出本地可变命名空间中的目录。
 
 #### 参数
 
-* arg [string]: Path to show listing for. Defaults to ‘/’. Required: no.
-* l [bool]: Use long listing format. Required: no.
+* arg [string]: 显示列表的路径。默认: ‘/’。是否必须: 否。
+* l [bool]: 是否使用长列表格式。是否必须: 否。
 
 #### 响应
 
@@ -1070,8 +1069,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Path to dir to make. Required: yes.
-* parents [bool]: No error if existing, make parent directories as needed. Required: no.
+* arg [string]: 创建目录的路径。是否必须: 是。
+* parents [bool]: 如果存在父目录，是否显示 No error；否则，是否创建父目录。是否必须: 否。
 
 #### 响应
 
@@ -1089,8 +1088,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Source file to move. Required: yes.
-* arg [string]: Destination path for file to be moved to. Required: yes.
+* arg [string]: 需要移动的源文件。是否必须: 是。
+* arg [string]: 文件拷贝到的目标路径。是否必须: 是。
 
 #### 响应
 
@@ -1108,9 +1107,9 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Path to file to be read. Required: yes.
-* offset [int]: Byte offset to begin reading from. Required: no.
-* count [int]: Maximum number of bytes to read. Required: no.
+* arg [string]: 需要读取的文件的路径。是否必须: 是。
+* offset [int]: 读取处的字节偏移量。是否必须: 否。
+* count [int]: 读取的字节数量最大值。是否必须: 否。
 
 #### 响应
 
@@ -1128,8 +1127,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: File to remove. Required: yes.
-* recursive [bool]: Recursively remove directories. Required: no.
+* arg [string]: 需要移除的文件。是否必须: 是。
+* recursive [bool]: 是否递归地移除目录。是否必须: 否。
 
 #### 响应
 
@@ -1147,10 +1146,10 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Path to node to stat. Required: yes.
-* format [string]: Print statistics in given format. Allowed tokens: . Conflicts with other format options. Default: Size: CumulativeSize: ChildBlocks: Type: . Default: “ Size: CumulativeSize: ChildBlocks: Type: ”. Required: no.
-* hash [bool]: Print only hash. Implies ‘–format=’. Conflicts with other format options. Default: “false”. Required: no.
-* size [bool]: Print only size. Implies ‘–format=’. Conflicts with other format options. Default: “false”. Required: no.
+* arg [string]: 需要显示状态的节点的路径。是否必须: 是。
+* format [string]: 以给定格式输出文件状态。支持的符号: .。不支持其他格式。默认: Size: CumulativeSize: ChildBlocks: Type: 。默认: “ Size: CumulativeSize: ChildBlocks: Type: ”。是否必须: 否。
+* hash [bool]: 是否只输出哈希值。指示 ‘–format=’。不支持其他格式。默认: 否。是否必须: 否。
+* size [bool]: 是否只输出大小。指示 ‘–format=’。不支持其他格式。默认: 否。是否必须: 否。
 
 #### 响应
 
@@ -1176,12 +1175,12 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Path to write to. Required: yes.
-* arg [file]: Data to write. Required: yes.
-* offset [int]: Byte offset to begin writing at. Required: no.
-* create [bool]: Create the file if it does not exist. Required: no.
-* truncate [bool]: Truncate the file to size zero before writing. Required: no.
-* count [int]: Maximum number of bytes to read. Required: no.
+* arg [string]: 写入路径。是否必须: 是。
+* arg [file]: 需要写入的数据。是否必须: 是。
+* offset [int]: 开始写入处的字节偏移量。是否必须: 否。
+* create [bool]: 如果文件不存在，是否创建文件。是否必须: 否。
+* truncate [bool]: 写入之前是否把文件长度截断为零。是否必须: 否。
+* count [int]: 读取字节的长度最大值。是否必须: 否。
 
 #### 请求体
 
@@ -1225,8 +1224,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Cid of objects to list. Required: no.
-* file-order [bool]: sort the results based on the path of the backing file. Required: no.
+* arg [string]: 需要列出的对象的Cid。是否必须: 否。
+* file-order [bool]: 是否根据备份文件的路径顺序对结果进行排序。是否必须: 否。
 
 #### 响应
 
@@ -1251,8 +1250,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Cid of objects to verify. Required: no.
-* file-order [bool]: verify the objects based on the order of the backing file. Required: no.
+* arg [string]: 待验证的对象的Cid。是否必须: 否。
+* file-order [bool]: 是否根据备份文件的路径顺序对结果进行验证。是否必须: 否。
 
 #### 响应
 
@@ -1277,11 +1276,11 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: The path to the IPFS object(s) to be outputted. Required: yes.
-* output [string]: The path where the output should be stored. Required: no.
-* archive [bool]: Output a TAR archive. Default: “false”. Required: no.
-* compress [bool]: Compress the output with GZIP compression. Default: “false”. Required: no.
-* compression-level [int]: The level of compression (1-9). Default: “-1”. Required: no.
+* arg [string]: 接收输出结果的IPFS 对象的路径。是否必须: 是。
+* output [string]: 存储输出结果的路径。是否必须: 否。
+* archive [bool]: 是否输出一个 TAR 压缩包。默认: 否。是否必须: 否。
+* compress [bool]: 是否使用 GZIP 压缩法对输出进行压缩。 默认: 否。是否必须: 否。
+* compression-level [int]: 压缩等级 (1-9). 默认: “-1”。是否必须: 否。
 
 #### 响应
 
@@ -1299,8 +1298,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Peer.ID of node to look up. Required: no.
-* format [string]: Optional output format. Required: no.
+* arg [string]: 需要查询的节点的 ID。是否必须: 否。
+* format [string]: 备选的输出格式。是否必须: 否。
 
 #### 响应
 
@@ -1326,9 +1325,9 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: name of key to create Required: yes.
-* type [string]: type of the key to create [rsa, ed25519]. Required: no.
-* size [int]: size of the key to generate. Required: no.
+* arg [string]: 新建键的名字。是否必须: 是。
+* type [string]: 新建键的类型 [rsa, ed25519]。是否必须: 否。
+* size [int]: 新建键的长度。是否必须: 否。
 
 #### 响应
 
@@ -1349,7 +1348,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* l [bool]: Show extra information about keys. Required: no.
+* l [bool]: 是否显示键的其他信息。是否必须: 否。
 
 #### 响应
 
@@ -1374,9 +1373,9 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: name of key to rename Required: yes.
-* arg [string]: new name of the key Required: yes.
-* force [bool]: Allow to overwrite an existing key. Required: no.
+* arg [string]: 需要重命名的键现在的名字。是否必须: 是。
+* arg [string]: 键的新名字。是否必须: 是。
+* force [bool]: 是否允许覆盖存在的键。是否必须: 否。
 
 #### 响应
 
@@ -1399,8 +1398,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: names of keys to remove Required: yes.
-* l [bool]: Show extra information about keys. Required: no.
+* arg [string]: 待移除的键的名字。是否必须: 是。
+* l [bool]: 是否显示键的其他信息。是否必须: 否。
 
 #### 响应
 
@@ -1425,8 +1424,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: The subsystem logging identifier. Use ‘all’ for all subsystems. Required: yes.
-* arg [string]: The log level, with ‘debug’ the most verbose and ‘critical’ the least verbose. One of: debug, info, warning, error, critical. Required: yes.
+* arg [string]: 子系统登日志识别符。所有子系统都使用 ‘all’。是否必须: 是。
+* arg [string]: 日志级别, 从 debug, info, warning, error 到 critical，其中最冗长的日志标记为 ‘debug'，最短的日志标记为 ‘critical’。是否必须: 是。
 
 #### 响应
 
@@ -1486,9 +1485,9 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: The path to the IPFS object(s) to list links from. Required: yes.
-* headers [bool]: Print table headers (Hash, Size, Name). Default: “false”. Required: no.
-* resolve-type [bool]: Resolve linked objects to find out their types. Default: “true”. Required: no.
+* arg [string]: 链接到列表的 IPFS 对象的路径。是否必须: 是。
+* headers [bool]: 是否输出表头 (Hash, Size, Name)。默认: 否。是否必须: 否。
+* resolve-type [bool]: 是否解析链接的对象来检测其数据类型。默认: 是。是否必须: 否。
 
 #### 响应
 
@@ -1520,8 +1519,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* ipfs-path [string]: The path where IPFS should be mounted. Required: no.
-* ipns-path [string]: The path where IPNS should be mounted. Required: no.
+* ipfs-path [string]: IPFS 挂载路径。是否必须: 否。
+* ipns-path [string]: IPNS 挂载路径。是否必须: 否。
 
 #### 响应
 
@@ -1543,11 +1542,11 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: ipfs path of the object to be published. Required: yes.
-* resolve [bool]: Resolve given path before publishing. Default: “true”. Required: no.
-* lifetime [string]: Time duration that the record will be valid for. This accepts durations such as “300s”, “1.5h” or “2h45m”. Valid time units are “ns”, “us” (or “µs”), “ms”, “s”, “m”, “h”. Default: “24h”. Required: no.
-* ttl [string]: Time duration this record should be cached for (caution: experimental). Required: no.
-* key [string]: Name of the key to be used or a valid PeerID, as listed by ‘ipfs key list -l’. Default:. Default: “self”. Required: no.
+* arg [string]: 待输出对象的 ipfs 访问路径。是否必须: 是。
+* resolve [bool]: 输出前是否解析给定路径。默认: 是。是否必须: 否。
+* lifetime [string]: 记录合理化的时间长度。可接受的长度有 “300s”, “1.5h” 或 “2h45m”。有效的时间单位是 “ns”, “us” (or “µs”), “ms”, “s”, “m”, “h”。默认: “24h”。是否必须: 否。
+* ttl [string]: 记录的缓存时间长度。请注意，这是实验参数。是否必须: 否。
+* key [string]: ‘ipfs key list -l’ 中所列的待使用键或者有效节点 ID 的名字。默认: “self”。是否必须: 否。
 
 #### 响应
 
@@ -1569,9 +1568,9 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: The IPNS name to resolve. Defaults to your node’s peerID. Required: no.
-* recursive [bool]: Resolve until the result is not an IPNS name. Default: “false”. Required: no.
-* nocache [bool]: Do not use cached entries. Default: “false”. Required: no.
+* arg [string]: 待解析的 IPNS 名。默认: 你的节点 ID。是否必须: 否。
+* recursive [bool]: 当结果是 IPNS 名时是否递归解析。默认: 否。是否必须: 否。
+* nocache [bool]: 是否弃用缓存条目。默认: 否。是否必须: 否。
 
 #### 响应
 
@@ -1592,7 +1591,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Key of the object to retrieve, in base58-encoded multihash format. Required: yes.
+* arg [string]: 待检索对象的键，格式是 base58 编码的multihash。是否必须: 是。
 
 #### 响应
 
@@ -1610,9 +1609,9 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Object to diff against. Required: yes.
-* arg [string]: Object to diff. Required: yes.
-* verbose [bool]: Print extra information. Required: no.
+* arg [string]: 被比较的对象。是否必须: 是。
+* arg [string]: 待比较的对象。是否必须: 是。
+* verbose [bool]: 是否输出其他信息。是否必须: 否。
 
 #### 响应
 
@@ -1640,7 +1639,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Key of the object to retrieve, in base58-encoded multihash format. Required: yes.
+* arg [string]: 待检索对象的键，格式是 base58 编码的multihash。是否必须: 是。
 
 #### 响应
 
@@ -1667,8 +1666,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Key of the object to retrieve, in base58-encoded multihash format. Required: yes.
-* headers [bool]: Print table headers (Hash, Size, Name). Default: “false”. Required: no.
+* arg [string]: 待检索对象的键，格式是 base58 编码的multihash。是否必须: 是。
+* headers [bool]: 打印表头 (Hash, Size, Name)。默认: 否。是否必须: 否。
 
 #### 响应
 
@@ -1695,7 +1694,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Template to use. Optional. Required: no.
+* arg [string]: 待用模版。可选。是否必须: 否。 
 
 #### 响应
 
@@ -1722,10 +1721,10 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: The hash of the node to modify. Required: yes.
-* arg [string]: Name of link to create. Required: yes.
-* arg [string]: IPFS object to add link to. Required: yes.
-* create [bool]: Create intermediary nodes. Default: “false”. Required: no.
+* arg [string]: 待调整节点的哈希值。是否必须: 是。
+* arg [string]: 新建连接的名字。是否必须: 是。
+* arg [string]: 需要添加连接的 IPFS 对象。是否必须: 是。
+* create [bool]: 是否创建中间节点。默认: 否。是否必须: 否。
 
 #### 响应
 
@@ -1754,8 +1753,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: The hash of the node to modify. Required: yes.
-* arg [file]: Data to append. Required: yes.
+* arg [string]: 待调整节点的哈希值。是否必须: 是。
+* arg [file]: 待追加数据。是否必须: 是。
 
 #### 请求体
 
@@ -1787,8 +1786,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: The hash of the node to modify. Required: yes.
-* arg [string]: Name of the link to remove. Required: yes.
+* arg [string]: 待调整节点的哈希值。是否必须: 是。
+* arg [string]: 待移除连接的名字。是否必须: 是。
 
 #### 响应
 
@@ -1816,8 +1815,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: The hash of the node to modify. Required: yes.
-* arg [file]: The data to set the object to. Required: yes.
+* arg [string]: 待调整节点的哈希值。是否必须: 是。
+* arg [file]: 待设置对象的数据字段。是否必须: 是。
 
 #### 请求体
 
@@ -1849,10 +1848,10 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [file]: Data to be stored as a DAG object. Required: yes.
-* inputenc [string]: Encoding type of input data. One of: {“protobuf”, “json”}. Default: “json”. Required: no.
-* datafieldenc [string]: Encoding type of the data field, either “text” or “base64”. Default: “text”. Required: no.
-* pin [bool]: Pin this object when adding. Default: “false”. Required: no.
+* arg [file]: 需要被存储为 DAG 对象的数据。是否必须: 是。
+* inputenc [string]: 输入数据的编码类型，包括 “protobuf”和 “json”。默认: “json”。是否必须: 否。
+* datafieldenc [string]: 数据域的编码类型，包括 “text” 和 “base64”。默认: “text”。是否必须: 否。
+* pin [bool]: 在添加对象时是否对其进行本地持久化存储。默认: 否。是否必须: 否。
 
 #### 请求体
 
@@ -1884,7 +1883,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Key of the object to retrieve, in base58-encoded multihash format. Required: yes.
+* arg [string]: 检索对象的键，格式是 base58 编码的 multihash。是否必须: 是。
 
 #### 响应
 
@@ -1909,8 +1908,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: P2P listener protocol Required: no.
-* all [bool]: Close all listeners. Default: “false”. Required: no.
+* arg [string]: P2P 监听协议。是否必须: 否。 Required: no.
+* all [bool]: 是否关闭所有监听。默认: 否。是否必须: 否。
 
 #### 响应
 
@@ -1924,11 +1923,11 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 ### /api/v0/p2p/listener/ls
 
-列举活跃的p2p listener。
+列举活跃的p2p 监听。
 
 #### 参数
 
-* headers [bool]: Print table headers (HandlerID, Protocol, Local, Remote). Default: “false”. Required: no.
+* headers [bool]: 打印表头 (HandlerID, Protocol, Local, Remote)。默认: 否。是否必须: 否。
 
 #### 响应
 
@@ -1953,8 +1952,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Protocol identifier. Required: yes.
-* arg [string]: Request handling application address. Required: yes.
+* arg [string]: 协议标示符。是否必须: 是。
+* arg [string]: 请求处理的程序地址。是否必须: 是。
 
 #### 响应
 
@@ -1973,8 +1972,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Stream HandlerID Required: no.
-* all [bool]: Close all streams. Default: “false”. Required: no.
+* arg [string]: 流的 HandlerID。是否必须: 否。 
+* all [bool]: 是否关闭所有流。默认: 否。是否必须: 否。
 
 #### 响应
 
@@ -1992,9 +1991,9 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Remote peer to connect to Required: yes.
-* arg [string]: Protocol identifier. Required: yes.
-* arg [string]: Address to listen for connection/s (default: /ip4/127.0.0.1/tcp/0). Required: no.
+* arg [string]: 需要连接的远端节点。是否必须: 是。
+* arg [string]: 协议标示符。是否必须: 是。
+* arg [string]: 连接监听地址。默认: /ip4/127.0.0.1/tcp/0)。是否必须: 否。
 
 #### 响应
 
@@ -2013,7 +2012,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* headers [bool]: Print table headers (HagndlerID, Protocol, Local, Remote). Default: “false”. Required: no.
+* headers [bool]: 打印表头 (HagndlerID, Protocol, Local, Remote)。默认: 否。是否必须: 否。
 
 #### 响应
 
@@ -2042,9 +2041,9 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Path to object(s) to be pinned. Required: yes.
-* recursive [bool]: Recursively pin the object linked to by the specified object(s). Default: “true”. Required: no.
-* progress [bool]: Show progress. Required: no.
+* arg [string]: 发送回显信息的对象的访问路径。 是否必须: 是。
+* recursive [bool]: 是否递归地本地持久化与指定对象连接的对象。默认: 是。是否必须: 否。
+* progress [bool]: 是否打印进程。是否必须: 否。
 
 #### 响应
 
@@ -2068,9 +2067,9 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Path to object(s) to be listed. Required: no.
-* type [string]: The type of pinned keys to list. Can be “direct”, “indirect”, “recursive”, or “all”. Default: “all”. Required: no.
-* quiet [bool]: Write just hashes of objects. Default: “false”. Required: no.
+* arg [string]: 待列出的对象的访问路径。是否必须: 否。
+* type [string]: 待列出的本地持久化键的类型，包括 “direct”, “indirect”, “recursive”, 和 “all”。默认: “all”。是否必须: 否。 
+* quiet [bool]: 是否仅输出对象的哈希值。默认: 否。是否必须: 否。
 
 #### 响应
 
@@ -2094,8 +2093,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Path to object(s) to be unpinned. Required: yes.
-* recursive [bool]: Recursively unpin the object linked to by the specified object(s). Default: “true”. Required: no.
+* arg [string]: 要删除的对象的访问路径。是否必须: 是。
+* recursive [bool]: 是否递归删除与固定对象相连的对象。默认: 是。是否必须: 否。
 
 #### 响应
 
@@ -2117,9 +2116,9 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Path to old object. Required: yes.
-* arg [string]: Path to new object to be pinned. Required: yes.
-* unpin [bool]: Remove the old pin. Default: “true”. Required: no.
+* arg [string]: 旧对象路径。是否必须: 是。
+* arg [string]: 需要本地持久化的对象的访问路径。是否必须: 是。
+* unpin [bool]: 删除旧的本地持久化对象。默认: 是。是否必须: 否。
 
 #### 响应
 
@@ -2142,8 +2141,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* verbose [bool]: Also write the hashes of non-broken pins. Required: no.
-* quiet [bool]: Write just hashes of broken pins. Required: no.
+* verbose [bool]: 是否输出连续本地持久化对象的哈希值。是否必须: 否。
+* quiet [bool]: 是否仅输出非连续本地持久化对象的哈希值。是否必须: 否。
 
 #### 响应
 
@@ -2172,8 +2171,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: ID of peer to be pinged. Required: yes.
-* count [int]: Number of ping messages to send. Default: “10”. Required: no.
+* arg [string]: 需要本地持久化的节点 ID。是否必须: **是**。
+* count [int]: 需要本地持久化节点的数量。默认: “10”。是否必须: 否。
 
 #### 响应
 
@@ -2213,11 +2212,11 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 ### /api/v0/pubsub/peers
 
-列出我们现在正在连接的peers。
+列出我们现在正在连接的节点。
 
 #### 参数
 
-* arg [string]: topic to list connected peers of Required: no.
+* arg [string]: 链接的节点列表的主题。是否必须: 否。
 
 #### 响应
 
@@ -2239,8 +2238,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Topic to publish to. Required: yes.
-* arg [string]: Payload of message to publish. Required: yes.
+* arg [string]: 待发布的主题。是否必须: 是。
+* arg [string]: 待发布消息的负载。是否必须: 是。
 
 #### 响应
 
@@ -2258,8 +2257,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: String name of topic to subscribe to. Required: yes.
-* discover [bool]: try to discover other peers subscribed to the same topic. Required: no.
+* arg [string]: 要订阅的主题的字符串名。是否必须: 是。
+* discover [bool]: 是否查找订阅了相同主题的节点。是否必须: 否。
 
 #### 响应
 
@@ -2336,8 +2335,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* quiet [bool]: Write minimal output. Default: “false”. Required: no.
-* stream-errors [bool]: Stream errors. Default: “false”. Required: no.
+* quiet [bool]: 显示最小输出。默认: 否。是否必须: 否。
+* stream-errors [bool]: 是否输出 Stream 错误。默认: 否。是否必须: 否。
 
 #### 响应
 
@@ -2358,7 +2357,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* human [bool]: Output RepoSize in MiB. Default: “false”. Required: no.
+* human [bool]: 是否以 MiB为单位输出 RepoSize。默认: 否。是否必须: 否。
 
 #### 响应
 
@@ -2403,7 +2402,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* quiet [bool]: Write minimal output. Required: no.
+* quiet [bool]: 是否显示最小输出。是否必须: 否。
 
 #### 响应
 
@@ -2423,8 +2422,8 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: The name to resolve. Required: yes.
-* recursive [bool]: Resolve until the result is an IPFS name. Default: “false”. Required: no.
+* arg [string]: 待解析的名字。是否必须: 是。
+* recursive [bool]: 如果结果是 IPFS 名字，是否递归解析。默认: 否。是否必须: 否。
 
 #### 响应
 
@@ -2494,10 +2493,10 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* peer [string]: Specify a peer to print bandwidth for. Required: no.
-* proto [string]: Specify a protocol to print bandwidth for. Required: no.
-* poll [bool]: Print bandwidth at an interval. Default: “false”. Required: no.
-* interval [string]: Time interval to wait between updating output, if ‘poll’ is true.
+* peer [string]: 指定需要打印带宽的节点。是否必须: 否。
+* proto [string]: 指定需要打印带宽的协议。是否必须: 否。
+* poll [bool]: 是否每隔一段时间打印带宽。默认: 否。是否必须: 否。
+* interval [string]: 打印的时间间隔。
    
 可以接受如“300s”, “1.5h” 或 “2h45m” 的时间区间。有效的时间单位是: “ns”, “us” (or “µs”), “ms”, “s”, “m”, “h”。 缺省: “1s”。是否必须：否。 
 
@@ -2523,7 +2522,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* human [bool]: Output RepoSize in MiB. Default: “false”. Required: no.
+* human [bool]: 是否输出 RepoSize，以 MiB 为单位。默认: 否。是否必须: 否。
 
 #### 响应
 
@@ -2569,7 +2568,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* id [bool]: Show peer ID in addresses. Default: “false”. Required: no.
+* id [bool]: 是否显示地址列表中的节点 ID。默认: 否。是否必须: 否。
 
 #### 响应
 
@@ -2591,7 +2590,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Address of peer to connect to. Required: yes.
+* arg [string]: 需要连接的节点的地址。是否必须: 是。
 
 #### 响应
 
@@ -2613,7 +2612,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Address of peer to disconnect from. Required: yes.
+* arg [string]: 需要关闭连接的节点地址。是否必须: 是。
 
 #### 响应
 
@@ -2635,7 +2634,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Multiaddr to filter. Required: yes.
+* arg [string]: 需要添加的地址过滤器。是否必须: 是。
 
 #### 响应
 
@@ -2657,7 +2656,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Multiaddr filter to remove. Required: yes.
+* arg [string]: 需要删除的地址过滤器。是否必须: 是。
 
 #### 响应
 
@@ -2679,9 +2678,9 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* verbose [bool]: display all extra information. Required: no.
-* streams [bool]: Also list information about open streams for each peer. Required: no.
-* latency [bool]: Also list information about latency to each peer. Required: no.
+* verbose [bool]: 是否展示全部信息。是否必须: 否。
+* streams [bool]: 是否列出每个节点的开源流信息。是否必须: 否。
+* latency [bool]: 是否列出每个节点的延迟时间信息。是否必须: 否。
 
 #### 响应
 
@@ -2715,7 +2714,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [file]: Tar file to add. Required: yes.
+* arg [file]: 需要添加的 Tar 文件。是否必须: 是。
 
 #### 请求体
 
@@ -2742,7 +2741,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: ipfs path of archive to export. Required: yes.
+* arg [string]: tar文件的 ipfs 导出路径。是否必须: 是。
 
 #### 响应
 
@@ -2758,7 +2757,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* arg [string]: Arguments for subcommand. Required: no.
+* arg [string]: 子命令的参数。是否必须: 否。
 
 #### 响应
 
@@ -2776,10 +2775,10 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
 #### 参数
 
-* number [bool]: Only show the version number. Default: “false”. Required: no.
-* commit [bool]: Show the commit hash. Default: “false”. Required: no.
-* repo [bool]: Show repo version. Default: “false”. Required: no.
-* all [bool]: Show all version information. Default: “false”. Required: no.
+* number [bool]: 是否只显示版本号。默认: 否。是否必须: 否。
+* commit [bool]: 是否显示 commit hash。默认: 否。是否必须: 否。
+* repo [bool]: 是否显示仓储版本。默认: 否。是否必须: 否。
+* all [bool]: 是否显示所有的版本信息。默认: 否。是否必须: 否。
 
 #### 响应
 
@@ -2797,7 +2796,7 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 
     curl "http://localhost:5001/api/v0/version?number=false&commit=false&repo=false&all=false"
 
-## 写在最后
+# 写在最后
 
 ##### IPFS 日志
 
@@ -2833,17 +2832,11 @@ IPFS HTTP API 是一种 RPC API 接口，在不同的IPFS实现之间都能工�
 [The Distributed, Permanent Web](https://www.youtube.com/watch?v=HUVmypx9HGI)
 
 
-
 ---
 
-Tip
-打赏
+Tip打赏
 
-校对 [sarah21cn](https://www.binstd.com/u/sarah21cn)
-
-ETH: `0xC70702AF123338852B91A2e26BeE9B256b6a2080`
-
-校对 [yangliu](https://www.binstd.com/u/yangliu)
+翻译 [yangliu](https://www.binstd.com/u/yangliu)
 
 ETH: `0x85d718C27a3eB0be78A5835C0805A7b1834A6B34`
 
