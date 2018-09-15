@@ -2121,13 +2121,6 @@
         "path": "/tutorial/tutorial.html"
     },
     {
-        "componentChunkName": "component---src-templates-docs-js",
-        "layout": "layout---index",
-        "layoutComponentChunkName": "component---src-layouts-index-js",
-        "jsonName": "docs-api-html.json",
-        "path": "/docs/api.html"
-    },
-    {
         "componentChunkName": "component---src-templates-tutorial-js",
         "layout": "layout---index",
         "layoutComponentChunkName": "component---src-layouts-index-js",
@@ -2154,6 +2147,20 @@
         "layoutComponentChunkName": "component---src-layouts-index-js",
         "jsonName": "tutorial-whitepaperipfs-html.json",
         "path": "/tutorial/whitepaperipfs.html"
+    },
+    {
+        "componentChunkName": "component---src-templates-docs-js",
+        "layout": "layout---index",
+        "layoutComponentChunkName": "component---src-layouts-index-js",
+        "jsonName": "docs-api-html.json",
+        "path": "/docs/api.html"
+    },
+    {
+        "componentChunkName": "component---src-templates-docs-js",
+        "layout": "layout---index",
+        "layoutComponentChunkName": "component---src-layouts-index-js",
+        "jsonName": "docs-examples-html.json",
+        "path": "/docs/examples.html"
     },
     {
         "componentChunkName": "component---cache-dev-404-page-js",

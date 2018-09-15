@@ -4,6 +4,8 @@
       title: 快速开始
     - id: install
       title: 安装IPFS
+    - id: examples
+      title: IPFS例子
 - title: API文档
   items:
     - id: api
